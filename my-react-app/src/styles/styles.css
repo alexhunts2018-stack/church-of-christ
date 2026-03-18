@@ -1,0 +1,660 @@
+body{
+    margin:0;
+    font-family:"Quintessential", serif;
+    overflow-x:hidden;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:rgb(61, 155, 233);
+    padding:10px 30px 30px;
+    font-size:30px;
+    margin:0;
+}
+
+.header img{
+    height:130px;
+    width:130px;
+    display:block;
+}
+
+.header ul{
+    display:flex;
+    gap:16px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.header ul li{
+    display:block;
+    margin:0;
+}
+
+.header ul li a{
+    text-decoration:none;
+    color:white;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.video-hero-2 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* FULL WIDTH VIDEO */
+.bg-video-2 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* THIS creates the "margin effect" */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+
+  min-height: 100vh;        /* full screen height */
+  padding: 40px 20px;
+}
+
+
+
+/* optional dark overlay for readability */
+.video-hero-2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.bg-video-2 {
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+/* HERO VIDEO */
+
+.video-hero{
+    position:relative;
+    width:100%;
+    height:80vh;
+    overflow:hidden;
+}
+
+
+.video-hero video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+}
+
+
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    padding:0 20px;
+    text-align:center;
+}
+
+.overlay-text h3{
+    margin:0;
+    color:white;
+    font-size:4rem;
+    text-shadow:0 4px 20px rgba(0,0,0,0.5);
+}
+
+.b-pic{
+  background-image: url("../../src/assets/imgs/city1.avif");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.c-pic{
+  background-image: url("../../src/assets/imgs/prayer-of-the-week.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.v-pic{
+  background-image: url("../../src/assets/imgs/canal.avif");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* CONTENT SECTIONS */
+
+.background{
+    background-color:lightblue;
+    padding:30px 0;
+}
+
+.section-container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+.building{
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+    align-items:stretch;
+    width:100%;
+}
+
+.picture,
+.location{
+    flex:1 1 0;
+    display:flex;
+    flex-direction:column;
+    background-color:white;
+    padding:15px;
+    width:100%;
+}
+
+.picture .media,
+.location .media{
+    flex:1;
+    display:flex;
+    width:100%;
+}
+
+.picture .media img,
+.location .media img,
+.location .media iframe,
+.picture img,
+.location iframe{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border:none;
+    display:block;
+}
+
+.location iframe{
+    min-height:350px;
+}
+
+/* BEFORE FOOTER */
+
+.beforefoot{
+    background-color:lightblue;
+    padding:40px 20px;
+    text-align:center;
+    font-size:20px;
+    margin: 0px;
+}
+
+.m-space{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.beforefoot input{
+    width:350px;
+    max-width:100%;
+    padding:10px;
+    text-align:center;
+    font-family:"Quintessential", serif;
+    background:white;
+    border:1px solid #ccc;
+}
+
+::placeholder{
+    color:black;
+    opacity:1;
+}
+
+/* FOOTER */
+
+footer{
+    background-color:grey;
+    padding:30px 20px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    text-align:center;
+    gap:40px;
+}
+
+.footer-left,
+.footer-right{
+    flex:1;
+}
+
+.footer-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.footer-right form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    width:100%;
+}
+
+.footer-right input,
+.footer-right textarea,
+.footer-right button{
+    width:100%;
+    max-width:260px;
+    padding:10px;
+}
+
+footer input,
+footer textarea{
+    background-color:grey;
+    border:2px solid black;
+    font-family:"Quintessential", serif;
+    text-align:center;
+}
+
+footer textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+h2,
+h3{
+    text-align:center;
+}
+
+.fa{
+    font-size:24px;
+    padding:10px;
+    color:black;
+}
+
+
+.tour-section {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.tour-section-2 {
+  width: 100%;
+  margin: 0;
+}
+
+.tour-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 70px 20px;
+  border-top: 1px solid #999;
+}
+
+.tour-row:last-child {
+  border-bottom: 1px solid #999;
+}
+
+.tour-media,
+.tour-text {
+  flex: 1;
+}
+
+.tour-media iframe {
+  width: 100%;
+  height: 320px;
+  border: none;
+  display: block;
+}
+
+.tour-text {
+  color: #8a837d;
+}
+
+.tour-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tour-text h2 {
+  font-size: 2.2rem;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.tour-text{
+  text-align: center;
+}
+
+.tour-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0 0 10px;
+  font-style: italic;
+}
+
+/* second row: text left, video right */
+.tour-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.button{
+  font-size: 30px;
+  color: black;
+  border-radius: 10px;
+}
+
+h1{
+  text-align: center;
+}
+
+.fa-house {
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.fa-brands{
+  padding: 5px;
+  color: black;
+  font-size: 30px;
+}
+.fa-house:hover {
+  color: black;
+}
+
+.tour-media {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  text-align: center;
+
+}
+
+.tour-media img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reveal {
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.hidden {
+  opacity: 0;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.reveal-up.hidden {
+  transform: translateY(50px);
+}
+
+.reveal-left.hidden {
+  transform: translateX(-50px);
+}
+
+.reveal-right.hidden {
+  transform: translateX(50px);
+}
+
+.reveal-zoom.hidden {
+  transform: translateY(30px) scale(0.96);
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .tour-row,
+  .tour-row.reverse {
+    flex-direction: column;
+  }
+
+  .tour-media iframe {
+    height: 240px;
+  }
+
+  .tour-text h2 {
+    font-size: 1.7rem;
+  }
+
+  .tour-number {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+
+  .building {
+    display: flex;
+    gap: 20px;
+    align-items: stretch; /* children have same height */
+  }
+
+  .picture,
+  .location {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+  }
+
+  /* Media container fills parent height */
+  .picture .media,
+  .location .media {
+    flex: 1;
+    display: flex;
+    aspect-ratio: 4 / 3; /* uniform aspect ratio (matches Google Maps) */
+  }
+
+  /* Images & iframes fill media container */
+  .picture .media img,
+  .location .media img,
+  .location .media iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;       /* stack logo + menu */
+    align-items: center;          /* center horizontally */
+    justify-content: center;      /* center vertically in available space */
+    height: auto;   
+    font-size: 18px;              /* let it grow naturally */
+    padding: 10px 0;              /* optional top/bottom spacing */
+  }
+
+  .header img {
+    display: block;
+    height: 80px;                 /* adjust size for mobile */
+    width: 80px;
+    margin: 0 auto 15px;          /* center + space below */
+    padding-top: 10px;            /* optional top padding */
+  }
+
+  .header ul {
+    display: flex;                /* flex container for menu items */
+    flex-direction: column;       /* stack menu items vertically */
+    align-items: center;          /* horizontal center */
+    justify-content: center;      /* vertical center (if needed) */
+    margin: 0;
+    padding: 0;
+  }
+
+  .header ul li {
+    list-style: none;
+    margin: 5px 0;               /* spacing between menu items */
+  }
+
+  .header ul li a {
+    display: block;
+    text-align: center;
+    padding: 5px 10px;           /* clickable area */
+  }
+}
+
+@media (max-width: 768px) {
+  .video-hero {
+    height: auto;
+    min-height: 60vh; /* scale down for smaller screens */
+    padding: 80px 0; 
+  }
+
+  .overlay-text h3 {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+/* ---------------- Mobile: stacked layout ---------------- */
+@media (max-width: 768px) {
+
+  .building {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .picture .media,
+  .location .media {
+    aspect-ratio: auto; /* natural height for mobile */
+    width: 100%;
+    height: auto;
+  }
+
+  .picture .media img,
+  .location .media img,
+  .location .media iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+}
+
+.m-space {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* controls the space */
+  justify-content: center; /* optional: keeps it centered */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* 👈 This makes both sides equal height */
+  text-align: center;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+
+input,
+textarea {
+  font-family: "Quintessential", serif !important;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .hidden,
+  .show {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
