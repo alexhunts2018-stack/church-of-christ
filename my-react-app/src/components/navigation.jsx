@@ -11,8 +11,8 @@ export default function Navigation() {
         <li><Link to="/About">About us</Link></li>
         <li><Link to="/Videos">Videos</Link></li>
         <li><Link to="/Links">Links</Link></li>
-        <li><a href="#">Visit Us</a></li>
-        <li><a href="#">Resources</a></li>
+        <li><Link to="/visit">Visit Us</Link></li>
+        <li><Link to="/resources">Resources</Link></li>
         <li><a href="#">More...</a></li>
       </ul>
     </div>

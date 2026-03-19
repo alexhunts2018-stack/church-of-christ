@@ -4,11 +4,9 @@ import bibleImg from '../assets/imgs/Bible image.avif'
 import radioImg from '../assets/imgs/radio.avif'
 import cityImg from '../assets/imgs/city1.avif'
 import video from '../../src/assets/imgs/video.mp4'
-import { useInView } from "react-intersection-observer";
 import Reveal from "../components/reveal";
 
 export default function HomePage() {
-  const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <>
       <div className="main">

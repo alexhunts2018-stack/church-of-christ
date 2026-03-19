@@ -6,6 +6,8 @@ import Videos from "./pages/Videos";
 import Root from "./components/root";
 import "./styles/styles.css";
 import Links from "./pages/links";
+import Visit from "./pages/visit";
+import Resources from "./pages/resources";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +16,8 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="videos" element={<Videos />} />
       <Route path="links" element={<Links />} />
+      <Route path="visit" element={<Visit />} />
+      <Route path="resources" element={<Resources />} />
     </Route>
   )
 );

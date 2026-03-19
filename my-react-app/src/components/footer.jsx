@@ -11,9 +11,9 @@ export default function Footer() {
             <h3>Oxford Church of Christ</h3>
             <h4>01295 574869</h4>
 
-            <a href="https://www.facebook.com/profile.php?id=100091498353465"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.youtube.com/@oxfordchurchofchrist"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://x.com/oxford_church1"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100091498353465"><i className="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@oxfordchurchofchrist"><i className="fa-brands fa-youtube"></i></a>
+            <a href="https://x.com/oxford_church1g"><i className="fa-brands fa-twitter"></i></a>
           </div>
 
           <div className="footer-right">
