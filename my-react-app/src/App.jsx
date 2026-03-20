@@ -8,6 +8,8 @@ import "./styles/styles.css";
 import Links from "./pages/links";
 import Visit from "./pages/visit";
 import Resources from "./pages/resources";
+import Lessons from "./pages/lessons";
+import WhatsOn from "./pages/whats-on";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
       <Route path="links" element={<Links />} />
       <Route path="visit" element={<Visit />} />
       <Route path="resources" element={<Resources />} />
+      <Route path="lessons" element={<Lessons />} />
+      <Route path="whatson" element={<WhatsOn />} />
     </Route>
   )
 );
