@@ -1018,25 +1018,35 @@ h1{
   }
 }
 
-
 @media (max-width: 768px) {
   .header ul {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centers everything horizontally */
+    align-items: center;
+    margin: 0;
     padding: 0;
   }
 
+  .header ul li {
+    width: auto;          /* change from 100% */
+    text-align: center;
+    margin: 5px 0;
+  }
+
   .nav-dropdown {
-    width: 100%;
     display: flex;
-    justify-content: center; /* centers dropdown */
-    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    width: auto;          /* change from 100% */
   }
 
   .nav-dropdown select {
-    width: 200px; /* or whatever looks good */
+    display: block;
+    margin: 0 auto;
+    width: auto;          /* remove fixed 200px if you want exact centering */
+    min-width: 0;
     text-align: center;
+    text-align-last: center;
   }
 }
 
@@ -1387,3 +1397,31 @@ textarea {
   }
 }
 
+@media (max-width: 768px) {
+  .header ul li a,
+  .nav-dropdown select {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .header ul li,
+  .nav-dropdown {
+    width: fit-content;
+    margin: 14px auto;
+    text-align: center;
+  }
+
+  .nav-dropdown select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: "Quintessential", serif;
+    padding: 0;
+    width: fit-content;
+    text-align: center;
+    text-align-last: center;
+  }
+}
