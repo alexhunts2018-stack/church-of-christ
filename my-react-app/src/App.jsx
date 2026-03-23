@@ -10,6 +10,7 @@ import Visit from "./pages/visit";
 import Resources from "./pages/resources";
 import Lessons from "./pages/lessons";
 import WhatsOn from "./pages/whats-on";
+import ThingsToSee from "./pages/thingstosee";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="resources" element={<Resources />} />
       <Route path="lessons" element={<Lessons />} />
       <Route path="whatson" element={<WhatsOn />} />
+      <Route path="to-do" element={<ThingsToSee />} />
     </Route>
   )
 );

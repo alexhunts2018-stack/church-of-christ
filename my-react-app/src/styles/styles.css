@@ -191,6 +191,7 @@ body{
 
 .hero-content {
   z-index: 2;
+  margin-top: 20px;
 }
 
 /* HERO VIDEO */
@@ -742,6 +743,158 @@ h1{
   margin-bottom: 0;
 }
 
+.oxford-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.canvas {
+  position: relative;
+  width: 900px;
+  min-height: 760px;
+  z-index: 1;
+}
+
+.card {
+  position: absolute;
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-magazine {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 18px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.small-text {
+  font-size: 14px;
+  color: #6f6f6f;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+
+.magazine-link {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  color: #123d8d;
+}
+
+.logo-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-card img,
+.castle-card img,
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ashmolean {
+  top: 160px;
+  left: 50px;
+  width: 220px;
+  height: 75px;
+}
+
+.pitt-rivers {
+  top: 160px;
+  left: 310px;
+  width: 190px;
+  height: 95px;
+  background: transparent;
+  padding: 0;
+}
+
+.natural-history {
+  top: 160px;
+  right: 50px;
+  width: 260px;
+  height: 75px;
+}
+
+.botanic {
+  top: 365px;
+  left: 35px;
+  width: 390px;
+  height: 100px;
+}
+
+.history-science {
+  top: 400px;
+  right: 130px;
+  width: 165px;
+  height: 65px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.photo-card {
+  width: 255px;
+  background: transparent;
+}
+
+.photo-header {
+  background: #1d6fd1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.25;
+  padding: 10px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+}
+
+.canal-walk {
+  bottom: 40px;
+  left: 35px;
+}
+
+.castle-card {
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 130px;
+  background: rgba(120, 120, 120, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.walking-tours {
+  bottom: 40px;
+  right: 35px;
+}
 
 
 .events-section {
@@ -875,6 +1028,51 @@ h1{
   .lesson-card {
     width: 100%;              /* full width */
     max-width: 400px;         /* keep it neat */
+  }
+}
+
+@media (max-width: 950px) {
+  .canvas {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .top-magazine,
+  .logo-card,
+  .photo-card,
+  .castle-card {
+    width: min(90%, 360px);
+    height: auto;
+  }
+
+  .ashmolean,
+  .pitt-rivers,
+  .natural-history,
+  .botanic,
+  .history-science {
+    height: 90px;
+  }
+
+  .photo-card img {
+    height: 200px;
+  }
+
+  .castle-card {
+    height: 140px;
   }
 }
 
