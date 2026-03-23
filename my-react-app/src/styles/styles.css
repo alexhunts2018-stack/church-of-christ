@@ -1018,6 +1018,28 @@ h1{
   }
 }
 
+
+@media (max-width: 768px) {
+  .header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers everything horizontally */
+    padding: 0;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centers dropdown */
+    margin-top: 10px;
+  }
+
+  .nav-dropdown select {
+    width: 200px; /* or whatever looks good */
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .lessons-grid {
     flex-direction: column;   /* stack vertically */
@@ -1028,6 +1050,10 @@ h1{
   .lesson-card {
     width: 100%;              /* full width */
     max-width: 400px;         /* keep it neat */
+  }
+
+  .nav-dropdown{
+    text-align: center;
   }
 }
 
